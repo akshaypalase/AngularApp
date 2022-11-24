@@ -6,7 +6,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
   styleUrls: ['./databinding-assignment.component.css']
 })
 export class DatabindingAssignmentComponent  {
-   username : string ="akshay palase";
+   username : string ="Codemind";
    x : boolean=false;
 
   constructor() { }
@@ -17,7 +17,13 @@ export class DatabindingAssignmentComponent  {
     
   }
   datta(){
-    this.x=false;
+    if(this.username.length>0){
+      this.x=false;
+    }
+    else{
+      this.x=true;
+    }
+    
     console.log("datta");
     
   }
