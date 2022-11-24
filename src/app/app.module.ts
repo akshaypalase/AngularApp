@@ -7,6 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DatabindingAssignmentComponent } from './databinding-assignment/databinding-assignment.component';
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatabindingAssignmentComponent } from './databinding-assignment/databin
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

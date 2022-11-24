@@ -1,0 +1,12 @@
+div ,p {
+    text-align-last: center;
+}
+#add{
+     font-style: italic;
+    font-size: x-large;
+    font-weight: 500;
+   
+}
+label{
+    font-weight: bolder;
+}
