@@ -1,0 +1,11 @@
+
+<div>The server id {{serverid}}
+    is {{serverstatus}}
+   </div>
+   <button [disabled]="!allowNewServer" (click)="onCreateServer()">add server</button>
+   <!-- <img [src]="imgurl"> -->
+   <div>{{ServerCreationStatus}}</div>
+   <div>two way data</div>
+   
+    <input type="text" [(ngModel)]="serverName">
+   

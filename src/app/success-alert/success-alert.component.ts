@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./success-alert.component.css']
 })
 export class SuccessAlertComponent implements OnInit {
-
+name : string='codemind';
+serverid: number=37;
+serverstatus: string='online';
   constructor() { }
 
   ngOnInit() {
