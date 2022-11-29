@@ -9,7 +9,9 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { DatabindingAssignmentComponent } from './databinding-assignment/databinding-assignment.component';
 import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
-import { NgswitchComponent } from './ngswitch/ngswitch.component'; 
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
+import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component'; 
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     SuccessAlertComponent,
     DatabindingAssignmentComponent,
     DemodirectivesComponent,
-    NgswitchComponent
+    NgswitchComponent,
+    AngularpraticeComponent,
+    StructuraldirectiveComponent
   ],
   imports: [
     BrowserModule,

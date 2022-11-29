@@ -1,0 +1,33 @@
+<div class="container">
+ <div><h1 id="a">Structural Directive Assignment</h1></div> 
+ <div><h3>1.ngIf Example</h3></div>
+    <input type="checkbox" [(ngModel)]="datta" (ngModelChange)="onChange()">create block
+    <br><br>
+    <div *ngIf="isValid">block has been created</div>
+    <br>
+    
+</div>
+<div>
+    {{title}}
+</div>
+
+<div class="table">
+<table id="datta">
+    <thead>
+        <tr>
+            <th>CourseName</th>
+            <th>Duration</th>
+            <th>CourseFee</th>
+            <th>CourseType</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courses">
+            <td>{{course.CourseName}}</td>
+            <td>{{course.Duration}}</td>
+            <td>{{course.CourseFee}}</td>
+            <td>{{course.CourseType}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
