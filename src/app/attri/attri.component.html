@@ -1,0 +1,15 @@
+<h4>ngStyle</h4>
+<div [ngStyle]="{'color':colorval,'background-color':'#ddd'}">I am learning angular 8</div>
+<br>
+<h4>ngClass</h4>
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success':person.country==='UK',
+        'text-primary':person.country==='USA',
+        'text-danger':person.country==='HK'
+    }">
+        {{person.name}} ({{person.country}})
+    </li>
+</ul>
+<p>Custom directive</p>
+<p appCustdi>custom di</p>

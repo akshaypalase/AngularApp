@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
-import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component'; 
+import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdiDirective } from './custdi.directive'; 
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { StructuraldirectiveComponent } from './structuraldirective/structuraldi
     DemodirectivesComponent,
     NgswitchComponent,
     AngularpraticeComponent,
-    StructuraldirectiveComponent
+    StructuraldirectiveComponent,
+    AttriComponent,
+    CustdiDirective
   ],
   imports: [
     BrowserModule,
