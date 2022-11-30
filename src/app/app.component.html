@@ -27,5 +27,8 @@
 <!-- <app-angularpratice></app-angularpratice> -->
 <!-- <app-structuraldirective></app-structuraldirective> -->
 <!-- <app-attri></app-attri> -->
-<app-success-alert [getUsername]="uname"></app-success-alert>
+<div *ngFor="let e of EmployeeRecord">
+<app-success-alert [employee]="e"></app-success-alert>
+
+</div>
 <router-outlet></router-outlet>

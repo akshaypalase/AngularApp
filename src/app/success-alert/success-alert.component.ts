@@ -11,9 +11,10 @@ name : string='codemind';
 serverid: number=37;
 serverstatus: string='online';
 
-@Input() getUsername : string;
+// @Input() getUsername : string;
+@Input() employee : any;
   ngOnInit() {
-    console.log('from parent',this.getUsername);
+    console.log('from parent',this.employee);
     
   }
 
