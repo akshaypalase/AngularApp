@@ -9,7 +9,7 @@ import { Builder } from 'protractor';
 export class AttriComponent implements OnInit {
 
   colorval = 'blue';
-
+  uname;
   people:any[] = [{"name": "Jack","country": "UK"},
   {"name": "Sumit","country": "USA"},
   {"name": "Anup","country": "HK"},
@@ -19,6 +19,11 @@ export class AttriComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  show(value){
+    this.uname=value;
+
+
   }
 
 }
