@@ -12,9 +12,9 @@
 </div>
 
 <div class="table">
-<table id="datta">
+
     <thead>
-        <tr>
+        <tr class="col-md-4">
             <th>CourseName</th>
             <th>Duration</th>
             <th>CourseFee</th>
@@ -29,5 +29,29 @@
             <td>{{course.CourseType}}</td>
         </tr>
     </tbody>
-</table>
+
+</div>
+
+
+
+<h3>NgSwitch</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+    <select class="form-controls" (change)="getProductVal($event)">
+        <option value="Default">Enter the Course Name</option>
+        <option value="Angular Developer">Angular Developer</option>
+        <option value="React Developer">React Developer</option>
+        <option value="AngularJs Developer">AngularJs Developer</option>
+        <option Value="Backend Developer">Backend Developer</option>
+    </select>
+</div> 
+<br>
+<div class=col-md-12 [ngSwitch]="selectedPro">
+<h2 class="text-success" *ngSwitchDefault>Enter the Course Name</h2>
+<h2 class="text-success" *ngSwitchCase="'Angular Developer'">Angular Developer</h2>
+<h2 class="text-success" *ngSwitchCase="'React Developer'">React Developer</h2>
+<h2 class="text-success" *ngSwitchCase="'AngularJs Developer'">AngularJs Developer</h2>
+<h2 class="text-success" *ngSwitchCase="'Backend Developer'">Backend Developer</h2>
 </div>
