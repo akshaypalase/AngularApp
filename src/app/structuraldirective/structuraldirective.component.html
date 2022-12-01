@@ -1,40 +1,43 @@
-<div class="container">
+
  <div><h1 id="a">Structural Directive Assignment</h1></div> 
  <div><h3>1.ngIf Example</h3></div>
     <input type="checkbox" [(ngModel)]="datta" (ngModelChange)="onChange()">create block
     <br><br>
     <div *ngIf="isValid">block has been created</div>
-    <br>
+    <hr>
     
-</div>
+
+<h3>2.ngFor Example</h3>
 <div>
     {{title}}
 </div>
 
-<div class="table">
+<table class="table">
 
     <thead>
         <tr class="col-md-4">
-            <th>CourseName</th>
-            <th>Duration</th>
-            <th>CourseFee</th>
-            <th>CourseType</th>
+            <th scope="col">SR.NO</th>
+            <th scope="col">CourseName</th>
+            <th scope="col">Duration</th>
+            <th scope="col">CourseFee</th>
+            <th scope="col">CourseType</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let course of courses">
-            <td>{{course.CourseName}}</td>
-            <td>{{course.Duration}}</td>
-            <td>{{course.CourseFee}}</td>
-            <td>{{course.CourseType}}</td>
+        <tr *ngFor="let course of courses; index as i">
+            <td scope="row">{{i+1}}</td>
+            <td scope="row">{{course.CourseName}}</td>
+            <td scope="row">{{course.Duration}}</td>
+            <td scope="row">{{course.CourseFee}}</td>
+            <td scope="row">{{course.CourseType}}</td>
         </tr>
     </tbody>
 
-</div>
+</table>
 
+<hr>
 
-
-<h3>NgSwitch</h3>
+<h3>3.NgSwitch</h3>
 
 <div class="container">
     <div class="row">
@@ -46,6 +49,8 @@
         <option value="AngularJs Developer">AngularJs Developer</option>
         <option Value="Backend Developer">Backend Developer</option>
     </select>
+    </div>
+</div>
 </div> 
 
 <div class=col-md-12 [ngSwitch]="selectedPro">
