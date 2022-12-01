@@ -13,7 +13,8 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
 import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustdiDirective } from './custdi.directive'; 
+import { CustdiDirective } from './custdi.directive';
+import { HooksComponent } from './hooks/hooks.component'; 
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustdiDirective } from './custdi.directive';
     AngularpraticeComponent,
     StructuraldirectiveComponent,
     AttriComponent,
-    CustdiDirective
+    CustdiDirective,
+    HooksComponent
   ],
   imports: [
     BrowserModule,
