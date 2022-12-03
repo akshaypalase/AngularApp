@@ -14,7 +14,9 @@ import { AngularpraticeComponent } from './angularpratice/angularpratice.compone
 import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdiDirective } from './custdi.directive';
-import { HooksComponent } from './hooks/hooks.component'; 
+import { HooksComponent } from './hooks/hooks.component';
+import { PassverifyComponent } from './passverify/passverify.component';
+import { ChildComponent } from './child/child.component'; 
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HooksComponent } from './hooks/hooks.component';
     StructuraldirectiveComponent,
     AttriComponent,
     CustdiDirective,
-    HooksComponent
+    HooksComponent,
+    PassverifyComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

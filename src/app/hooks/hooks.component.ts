@@ -7,10 +7,10 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class HooksComponent implements OnInit,OnChanges {
 
-  @Input() public uid: number;
+  @Input() public dat: string;
   
   constructor() {
-    console.log();
+    console.log("hook component constructor called");
     
    }
   ngOnChanges(changes: SimpleChanges): void {
@@ -18,6 +18,7 @@ export class HooksComponent implements OnInit,OnChanges {
   }
 
   ngOnInit() {
+    console.log("hook component ngOnInit called");
   }
 
 }

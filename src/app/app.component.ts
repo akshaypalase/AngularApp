@@ -6,7 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
+
+  constructor(){
+    // console.log("constructor called");
+    
+
+  }
+  ngOnInit() {
+
+    // console.log("ngOnInit called");
+  }
+  updatedata(){
+    this.data="hi";
+  }
+  data="hello";
   uname : string ='hello good morning';
 
   EmployeeRecord :any=[
@@ -14,8 +27,14 @@ export class AppComponent {
       eName:"Tanmay",eCity:"Palghar",eSalary:"20000"
     },
     {
-      eName:"Abhishek",eCity:"Borivali",eSalary:"50000"
+      eName:"Abhishek",eCity:"Mira-Bhayander",eSalary:"50000"
+    },
+    {
+      eName:"Rohit",eCity:"Thane",eSalary:"35000"
     }
   ]
 }
+
+
+
 
