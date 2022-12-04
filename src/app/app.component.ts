@@ -21,6 +21,7 @@ export class AppComponent {
   }
   data="hello";
   uname : string ='hello good morning';
+  childDataReceived : string="";
 
   EmployeeRecord :any=[
     {
@@ -33,6 +34,10 @@ export class AppComponent {
       eName:"Rohit",eCity:"Thane",eSalary:"35000"
     }
   ]
+  receiveData(event:string){
+    this.childDataReceived=event;
+    
+  }
 }
 
 

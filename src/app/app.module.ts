@@ -16,7 +16,8 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdiDirective } from './custdi.directive';
 import { HooksComponent } from './hooks/hooks.component';
 import { PassverifyComponent } from './passverify/passverify.component';
-import { ChildComponent } from './child/child.component'; 
+import { ChildComponent } from './child/child.component';
+import { ChilddemoComponent } from './childdemo/childdemo.component'; 
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ChildComponent } from './child/child.component';
     CustdiDirective,
     HooksComponent,
     PassverifyComponent,
-    ChildComponent
+    ChildComponent,
+    ChilddemoComponent
   ],
   imports: [
     BrowserModule,

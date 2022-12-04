@@ -27,8 +27,8 @@
 <!-- <app-angularpratice></app-angularpratice> -->
 <!-- <app-structuraldirective></app-structuraldirective> -->
 <!-- <app-attri></app-attri> -->
-<div *ngFor="let e of EmployeeRecord">
-<app-child [employee]="e"></app-child>
+<!-- <div *ngFor="let e of EmployeeRecord">
+<app-child [employee]="e"></app-child> -->
 <!-- <app-passverify></app-passverify> -->
 <!-- <select (change)="uid = sid.value" #sid>
   <option selected disabled>No value selected</option>
@@ -43,5 +43,7 @@
   <app-hooks *ngIf="isChild" data="{{data}}"></app-hooks>
  
 </div> -->
+<app-childdemo (childStringData)="receiveData($event)"></app-childdemo>
+{{childDataReceived}}
 
 <router-outlet></router-outlet>
