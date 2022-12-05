@@ -43,7 +43,9 @@
   <app-hooks *ngIf="isChild" data="{{data}}"></app-hooks>
  
 </div> -->
-<app-childdemo (childStringData)="receiveData($event)"></app-childdemo>
-{{childDataReceived}}
+<!-- <app-childdemo (childStringData)="receiveData($event)" ></app-childdemo>
+{{childDataReceived}} -->
+<button (click)="toggleChild()">click</button>
+<app-childdemo *ngIf="isChild"></app-childdemo>
 
 <router-outlet></router-outlet>

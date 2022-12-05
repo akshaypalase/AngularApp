@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   constructor(){
-    // console.log("constructor called");
+     console.log("parent constructor is called");
     
 
   }
   ngOnInit() {
 
-    // console.log("ngOnInit called");
+   console.log("parent ngOnInit is called");
   }
   updatedata(){
     this.data="hi";
@@ -22,6 +22,7 @@ export class AppComponent {
   data="hello";
   uname : string ='hello good morning';
   childDataReceived : string="";
+  isChild=false;
 
   EmployeeRecord :any=[
     {
@@ -37,6 +38,10 @@ export class AppComponent {
   receiveData(event:string){
     this.childDataReceived=event;
     
+  }
+
+  toggleChild(){
+    this.isChild=!this.isChild;
   }
 }
 

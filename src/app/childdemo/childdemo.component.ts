@@ -9,12 +9,16 @@ export class ChilddemoComponent implements OnInit {
 
 childData : string ="data from child component";
 @Output() childStringData : EventEmitter<string>=new EventEmitter();
-  constructor() { }
+  constructor() {
+    console.log('child constructor');
+    
+   }
   employee :any=[];
 
   
 
   ngOnInit() {
+    console.log('child ngOnInit');
     
   }
   sendData(){
