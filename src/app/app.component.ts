@@ -16,10 +16,10 @@ export class AppComponent {
 
    console.log("parent ngOnInit is called");
   }
-  updatedata(){
-    this.data="hi";
-  }
-  data="hello";
+  // updatedata(){
+  //   this.data="hi";
+  // }
+  // data="hello";
   uname : string ='hello good morning';
   childDataReceived : string="";
   isChild=false;
@@ -42,6 +42,11 @@ export class AppComponent {
 
   toggleChild(){
     this.isChild=!this.isChild;
+  }
+  username : string="hello";
+
+  changedata(){
+    this.username="hii";
   }
 }
 

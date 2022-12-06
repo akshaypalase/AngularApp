@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,13 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() employee : any;
+  // @Input() employee : any;
+
+  @Input() data : string;
+
+  ngOnChanges(){
+    console.log('data from parent to child component',this.data)
+  }
 
   constructor() { }
   
   ngOnInit() {
 
-    console.log(this.employee);
+    // console.log(this.employee);
     
   }
 
