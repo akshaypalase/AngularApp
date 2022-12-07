@@ -48,6 +48,12 @@ export class AppComponent {
   changedata(){
     this.username="hii";
   }
+
+  childexist :boolean=true;
+
+  destroy(){
+    this.childexist=false;
+  }
 }
 
 
