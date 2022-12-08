@@ -18,7 +18,8 @@ import { HooksComponent } from './hooks/hooks.component';
 import { PassverifyComponent } from './passverify/passverify.component';
 import { ChildComponent } from './child/child.component';
 import { ChilddemoComponent } from './childdemo/childdemo.component';
-import { AddRemoveComponent } from './add-remove/add-remove.component'; 
+import { AddRemoveComponent } from './add-remove/add-remove.component';
+import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component'; 
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AddRemoveComponent } from './add-remove/add-remove.component';
     PassverifyComponent,
     ChildComponent,
     ChilddemoComponent,
-    AddRemoveComponent
+    AddRemoveComponent,
+    SimpletemplateformComponent
   ],
   imports: [
     BrowserModule,
