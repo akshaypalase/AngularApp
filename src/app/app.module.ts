@@ -20,7 +20,8 @@ import { ChildComponent } from './child/child.component';
 import { ChilddemoComponent } from './childdemo/childdemo.component';
 import { AddRemoveComponent } from './add-remove/add-remove.component';
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
-import { FormComponent } from './form/form.component'; 
+import { FormComponent } from './form/form.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component'; 
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FormComponent } from './form/form.component';
     ChilddemoComponent,
     AddRemoveComponent,
     SimpletemplateformComponent,
-    FormComponent
+    FormComponent,
+    ReactiveformComponent
  
   ],
   imports: [
