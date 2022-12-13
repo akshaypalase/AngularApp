@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
+  }
+  onSumbit(form:NgForm){
+    console.log(form);
+    
   }
 
 }

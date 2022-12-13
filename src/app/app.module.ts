@@ -43,7 +43,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     AddRemoveComponent,
     SimpletemplateformComponent,
     FormComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    
  
   ],
   imports: [

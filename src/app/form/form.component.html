@@ -1,34 +1,62 @@
-<div class="container">
+<div class="college">
+<div class="container" >
 
   <div class="row-justify-content-center">
-    <h2 class="text-center">Appointment Letter</h2>
-    <div class="col-md-6" col-md-6 text-left rounded shadow py-5>
+    <h2 class="text-center px-10">MUMBAI UNIVERSITY</h2>
+    <h4 class=" offset-5">Student Registration Form</h4>
+   <form action=""><div   text-left rounded shadow py-5 >
+
+ 
+    <div class="form-group" [ngSubmit]="onSumbit(myform)" #myform="ngForm">
+    <label for="Name" class="col-3">Name:</label >
+    <input type="text" id="name" class="form-control" name="Name" required placeholder="Enter your name" class="col-6 " ngModel >
+    </div>
+    <div class="form-group">
+      <label for="DOB" class="col-3">DOB:</label>
+      <input type="date" class="form-control" id="DOB" name="DOB" placeholder="enter DOB" class="col-6" ngModel >
+    </div>
+    <div class="form-group">
+      <label class="col-3" name="Gender">Gender:</label>
+      <input type="radio" id="Male" name="Gender" ngModel >
+      <label for="Male" class="mr-2">Male</label>
+      <input type="radio" id="Female" name="Gender" ngModel>
+      <label for="Female" class="mr-2">Female</label>
+      
       <div class="form-group">
-        <label for="name">Name</label>
-        <input class="form-control" type="text" id="name" placeholder="Enter Name">
+        <label for="Email" class="col-3">Email</label>
+        <input type="email" id="email" class="form-control" name="Email" email placeholder="enter email id" class="col-6" ngModel>
       </div>
       <div class="form-group">
-        <label for="Email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email address">
-      </div>
+        <label for="Address" class="col-3">Address</label>
+        <input type="textarea" id="Address" class="form-control" name="Address" placeholder="enter address" class="col-6" ngModel>
+      </div> 
+
       <div class="form-group">
-        <label for="Phone number">Phone number</label>
-        <input type="number" class="form-control" id="Phone number" placeholder="Enter number">
+        <label for="Number" class="col-3">Phone Number</label>
+        <input type="number" id="Number" name="Phone Number" class="form-control" class="col-6" ngModel>
       </div>
 
-      <div class="col-md-2">
+      <div class="form-group">
+        <label for="College" class="col-3">College</label>
+        <select name="College" id="College" class="form-control" name="College" class="col-6" ngModel>
+          <option value="Viva">Viva</option>
+          <option value="Abhinav">Abhinav</option>
+          <option value="S.N">S.N</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="Choose date">Choose date</label>
-        <input type="date" class="form-control" value="">
-        <input type="time" class="form-control">
+        <button class="col-2" type="reset">Reset</button>
+        <button class="col-2" class="btn-btn-success" type="submit" >Submit</button>
       </div>
-      <div class="form-group">
-        <label for="Comments">Comments</label>
-        <input type="textarea" >
-      </div>
-    </div>
+      
+ 
+      
   </div>
+</div>
+</form>
+    
+</div>
+</div>
 </div>
 
 
