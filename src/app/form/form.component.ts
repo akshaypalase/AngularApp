@@ -13,8 +13,8 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSumbit(form:NgForm){
-    console.log(form);
+  sumbitform(collegeform:NgForm){
+    console.log(collegeform);
     
   }
 

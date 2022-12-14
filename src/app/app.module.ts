@@ -21,7 +21,9 @@ import { ChilddemoComponent } from './childdemo/childdemo.component';
 import { AddRemoveComponent } from './add-remove/add-remove.component';
 import { SimpletemplateformComponent } from './simpletemplateform/simpletemplateform.component';
 import { FormComponent } from './form/form.component';
-import { ReactiveformComponent } from './reactiveform/reactiveform.component'; 
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { LoginformComponent } from './loginform/loginform.component'; 
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     SimpletemplateformComponent,
     FormComponent,
     ReactiveformComponent,
+    LoginformComponent,
     
  
   ],

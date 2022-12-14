@@ -4,10 +4,9 @@
   <div class="row-justify-content-center">
     <h2 class="text-center px-10">MUMBAI UNIVERSITY</h2>
     <h4 class=" offset-5">Student Registration Form</h4>
-   <form action=""><div   text-left rounded shadow py-5 >
-
- 
-    <div class="form-group" [ngSubmit]="onSumbit(myform)" #myform="ngForm">
+   <form #collegeform="ngForm" (ngSubmit)="submitform(collegeform)">
+    <div   text-left rounded shadow py-5 >
+<div class="form-group" >
     <label for="Name" class="col-3">Name:</label >
     <input type="text" id="name" class="form-control" name="Name" required placeholder="Enter your name" class="col-6 " ngModel >
     </div>
@@ -46,7 +45,7 @@
       </div>
       <div class="form-group">
         <button class="col-2" type="reset">Reset</button>
-        <button class="col-2" class="btn-btn-success" type="submit" >Submit</button>
+        <button class="col-2" class="btn-btn-success" type="submit"  >Submit</button>
       </div>
       
  
