@@ -23,7 +23,8 @@ import { SimpletemplateformComponent } from './simpletemplateform/simpletemplate
 import { FormComponent } from './form/form.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { LoginformComponent } from './loginform/loginform.component'; 
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +48,14 @@ import { LoginformComponent } from './loginform/loginform.component';
     FormComponent,
     ReactiveformComponent,
     LoginformComponent,
-    
+    CheckoutComponent
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
