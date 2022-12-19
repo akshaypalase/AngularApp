@@ -1,3 +1,4 @@
+import { visitValue } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -8,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-
+  defaultValue : string = "Viva";
   constructor() { }
 
   ngOnInit() {

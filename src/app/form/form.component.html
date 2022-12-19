@@ -6,20 +6,20 @@
     <h4 class=" offset-4">Student Registration Form</h4>
    <form #collegeform="ngForm" (ngSubmit)="onSubmit(collegeform)">
     <div   text-left rounded shadow py-5 >
-<div class="form-group" >
+<div class="form-group"  >
     <label for="Name" class="col-3">Name:</label >
     <input type="text" id="name" class="form-control" name="Name" required placeholder="Enter your name" class="col-6 " #Name="ngModel"  ngModel >
-    <small *ngIf="Name.touched && !Name.valid">enter valid name</small>
+    <div *ngIf="Name.touched && !Name.valid" id="user" >enter valid name</div>
     </div>
     <div class="form-group">
       <label for="DOB" class="col-3">DOB:</label>
       <input type="date" class="form-control" id="DOB" name="DOB" placeholder="enter DOB" class="col-6" ngModel >
     </div>
     <div class="form-group">
-      <label class="col-3" for="Gender">Gender</label>
-      <input type="radio" id="Male" name="Gender" ngModel >
+      <label class="col-3" >Gender</label>
+      <input type="radio" id="Male" value="Male" name="gender"  ngModel >
       <label for="Male" class="mr-2">Male</label>
-      <input type="radio" id="Female" name="Gender" ngModel>
+      <input type="radio" id="Female" value="Female" name="gender"   ngModel>
       <label for="Female" class="mr-2">Female</label>
       
       <div class="form-group">
@@ -38,15 +38,15 @@
 
       <div class="form-group">
         <label for="College" class="col-3">College</label>
-        <select name="College" id="College" class="form-control" name="College" class="col-6" ngModel>
+        <select name="College" id="College" class="form-control" name="College" class="col-6" ngModel [ngModel]="defaultValue">
           <option value="Viva">Viva</option>
           <option value="Abhinav">Abhinav</option>
           <option value="S.N">S.N</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="submit" class="col-3">submit</label>
-        <button class="col-3 btn-primary"   type="submit" [disabled]="!collegeform.valid">Submit</button>
+      <div class="form-group mt">
+        
+        <button class=" btn-primary offset-3"   type="submit"  [disabled]="!collegeform.valid" >Submit</button>
       </div>
       
  

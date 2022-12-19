@@ -8,6 +8,11 @@ input,select{
     color: rgb(156, 161, 161);
     margin-bottom: 30px;
 }
+label{
+    font-size:larger;
+    font-weight: bold;
+    
+}
 
 .container{
     border: 5px solid black;
@@ -17,5 +22,8 @@ input,select{
 
 input.ng-invalid.ng-touched{
     border: 1px solid red;box-shadow: 0 0 13px #ff000021;
+}
+#user{
+    margin-bottom: 0cm;
 }
 
