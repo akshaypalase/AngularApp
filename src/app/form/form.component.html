@@ -9,7 +9,7 @@
 <div class="form-group"  >
     <label for="Name" class="col-3">Name:</label >
     <input type="text" id="name" class="form-control" name="Name" required placeholder="Enter your name" class="col-6 " #Name="ngModel"  ngModel >
-    <div *ngIf="Name.touched && !Name.valid" id="user" >enter valid name</div>
+    <strong *ngIf="Name.touched && !Name.valid" class="text-danger" >enter valid name</strong>
     </div>
     <div class="form-group">
       <label for="DOB" class="col-3">DOB:</label>
@@ -18,17 +18,19 @@
     <div class="form-group">
       <label class="col-3" >Gender</label>
       <input type="radio" id="Male" value="Male" name="gender"  ngModel >
-      <label for="Male" class="mr-2">Male</label>
+      <label for="Male" class="mr-3">Male</label>
       <input type="radio" id="Female" value="Female" name="gender"   ngModel>
-      <label for="Female" class="mr-2">Female</label>
+      <label for="Female" class="mr-3">Female</label>
       
       <div class="form-group">
         <label for="Email" class="col-3">Email</label>
-        <input type="email" id="Email" class="form-control" name="Email" email required placeholder="enter email id" class="col-6" ngModel>
+        <input type="email" id="Email" class="form-control" name="Email" #Email="ngModel" email required placeholder="enter email id" class="col-6" ngModel>
+        <strong *ngIf="Email.touched && !Email.valid" class="text-danger" >Enter Valid Email Id</strong>
       </div>
       <div class="form-group">
         <label for="Address" class="col-3">Address</label>
-        <input type="textarea" id="Address" class="form-control" name="Address" placeholder="enter address" class="col-6" ngModel>
+        <input type="textarea" id="Address" class="form-control" #Address="ngModel" name="Address" minlength="10" maxlength="20" placeholder="enter address" class="col-6" ngModel>
+      <strong></strong>
       </div> 
 
       <div class="form-group">
