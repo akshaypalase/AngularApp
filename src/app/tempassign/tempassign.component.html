@@ -1,0 +1,53 @@
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-left rounded shadow py-5">
+               
+                  <form #tempform="ngForm" (ngSubmit)="submitForm(tempform)">
+                    <h2 class="text-center">Template Driven Form</h2>
+                    <div class="form-group">
+                       <label for="name">Name:</label>
+                       <input type="text" class="form-control" minlength='5' required pattern="[A-Z]+$" #username="ngModel" name="username" ngModel>
+                       <small *ngIf="!username.valid && username.touched">Enter Uppercase letter only</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="D.O.B">D.O.B</label>
+                        <input type="date" class="form-control" name="date" ngModel>
+                    </div>
+                   <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" name="email" email #email="ngModel" required ngModel>
+                    <small *ngIf="!email.valid && email.touched">Enter Valid email</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input type="text" class="form-control" name="password" required #name="ngModel" ngModel>
+                       </div>
+                   <div class="form-group">
+                    <label for="Phone">Phone:</label>
+                    <input type="number" class="form-control"  name="Phone"  maxlength='10' minlength='10' #phone="ngModel" pattern="[0-9]+$" ngModel>
+                    <small *ngIf="!phone.valid && phone.touched">Enter valid phone number</small>
+                   </div>
+                   <div class="form-group">
+                    <label for="Address">Address:</label>
+                    <input type="text" class="form-control" name="address" ngModel>
+                   </div>
+                   <div class="form-group">
+                    <label  for="Subscriptions">Subscriptions:</label>
+                    <select class="form-control" value name="Subscriptions"  [ngModel]="defaultValue">
+                        <option value="Basic">Basic</option>
+                        <option selected value="Advanced" >Advanced</option>
+                        <option value="Pro">Pro</option>
+                    </select>
+                   </div>
+                   
+                   <div class="form-group">
+                    <button [disabled]="tempform.invalid" class="btn btn-primary">Submit</button>
+                   </div> 
+                   
+                  </form>
+                </div>
+            </div>
+        </div>
+  
+

@@ -25,6 +25,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { LoginformComponent } from './loginform/loginform.component'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { TempassignComponent } from './tempassign/tempassign.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     FormComponent,
     ReactiveformComponent,
     LoginformComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    TempassignComponent
  
   ],
   imports: [

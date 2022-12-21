@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+// import { Employee, TempEmp } from '../modelss/employee';
 
 @Component({
   selector: 'app-angularpratice',
@@ -7,20 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AngularpraticeComponent implements OnInit {
 
-  myName : string ="akshay";
+  // empobj=new TempEmp();
+
 
   constructor() { }
 
-  myMethod(){
-    return 'my channel name' +this.myName;
-  }
-
-  myappstatus : boolean=false; 
-  status1 : string="online";
-  status2 : string="offline";
+ 
 
 
   ngOnInit() {
   }
-
+  OnSubmit(form:NgForm){
+    // this.empobj.username=form.value.username;
+    // this.empobj.email=form.value.email;
+    // this.empobj.subscription=form.value.subscription;
+    // this.empobj.password=form.value.password
+    console.log(form);
+  }
 }

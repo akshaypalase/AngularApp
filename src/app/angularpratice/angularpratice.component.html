@@ -1,6 +1,65 @@
-<div> my name is {{myName}}</div>
-<p>Welcome{{myName}}</p>
-{{5+9}}
-{{myMethod()}}
-<br><br>
-{{myappstatus? status1 : status2}}
+<div class="bg">
+    <div class="container-fluid ">
+        <div class="row justify-content-center ">
+            <div class="col-sm-6">
+                <div class="container">
+                <form (ngSubmit)="OnSubmit(myform)" #myform="ngForm"  >
+
+                    <div class="form-group">
+                        <label for="username">Username::</label>
+                        <input type="text" ngModel placeholder="Enter username"  required name="username"
+                            class="form-control" #username="ngModel">
+                        <small ngIf="username.invalid&&username.touched" style="color: red;"> Enter valid username</small>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input type="email" ngModel placeholder="Enter Email" email required  name="email"
+                            class="form-control" #email="ngModel">
+                        <small ngIf="email.invalid&&email.touched" style="color: red;"> Enter valid Email</small>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="Select Subscription">Subscription: </label>
+                        <select  class="form-control" ngModel name="subscription" id="subscription">
+                            <option value="Basic">Basic</option>
+                            <option value="Advance">Advance</option>
+                            <option value="pro">pro</option>
+                        </select>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="text" ngModel placeholder="Enter password" required name="password"
+                            class="form-control" #password="ngModel">
+                        <small ngIf="password.invalid&& password.touched" style="color: red;"> password field should not be empty</small>
+                    </div><br>
+                    
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <br>
+                        <h3 *ngIf="myform.touched && myform.invalid" style="    color: rgb(100, 2, 63);">Please fill all
+                            fields carefully</h3>
+                    </div>
+                  
+
+                </form>
+                <div class=" row jestify-content-center mt-2">
+                    <div class="container col-md-6 rounded shadow py-3  bg-dark text-white">
+                        <h3>User data</h3>
+                        <p>User name:{{empobj.username}}</p>
+                        <p>email :{{empobj.email}}</p>
+                        <p>subscription:{{empobj.subscription}}</p>
+                        <p>password:{{empobj.password}}</p>
+                    </div>
+                   </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
