@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-md-8 rounded shadow py-5">
+        <h4 class="text-center">Reactive Form</h4>
+        <form [formGroup]="datta" (ngSubmit)="onSubmit()">
+          
+            <div class="form-group">
+               <label for="First Name">First Name</label>
+               <input type="text" class="form-control"
+                id="username" formControlName = "username">
+                <small>Enter valid name minmum 5 character</small>
+               </div>
+              
+            <div class="form-group">
+                <label for="Last Name">Last Name</label>
+                <input type="text" class="form-control"
+                 id="lastName" formControlName = "lastName">
+                 <small>Enter valid lastname </small>
+            </div>
+
+             <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="text" class="form-control"
+                 id="Age" formControlName = "Age">
+                <small>Enter valid Age</small>
+            </div>
+
+
+            <div class="form-group">
+               <label for="email">Email</label>
+               <input type="email" class="form-control" 
+               id="email" formControlName = "email">
+               <small>Enter valid email</small>
+            </div>
+
+            <div class="form-group">
+                <label for="Phone">Phone</label>
+                <input type="text" class="form-control"
+                 id="phone" formControlName = "phone">
+                 <small>please enter only 10 number</small>
+            </div>
+
+           <div class="radio" *ngFor="let gender of genders">
+            <label>
+              <input type="radio" [value]="gender"
+              formControlName = "gender">{{gender}}
+            </label>
+           </div>
+
+          <div class="form-group">
+            
+          <select class="form-control" name="" id="">
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+         </div>
+  
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="text" class="form-control"
+             id="password" formControlName = "password">
+             <small>Enter valid password</small>
+          </div>
+
+         <div class="form-group">
+            <label for="Confirm Password">Confirm Password</label>
+            <input type="text" class="form-control"
+             id="confirm" formControlName = "confirm">
+             <small>Password doesn't Match</small>
+        </div>
+  
+          <button class="btn btn-primary" type="submit">Submit</button> 
+        </form>
+      </div>
+    </div>
+  </div>

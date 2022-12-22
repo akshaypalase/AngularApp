@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { User } from '../models/user';
 @Component({
   selector: 'app-tempassign',
   templateUrl: './tempassign.component.html',
   styleUrls: ['./tempassign.component.css']
 })
 export class TempassignComponent implements OnInit {
-
+ user = new User();
+ deafaultValue : string ="Advanced";
   constructor() { }
-  deafaultValue : string ="Advanced";
+  
+  
   ngOnInit() {
   }
+
+
   submitForm(tempform:NgForm){
-      console.log(tempform);
-      console.log(tempform.value.email);
-      console.log(tempform.value.Subscriptions);
-      console.log(tempform.value.password);
+      this.user.Name=tempform.value.username;
+      console.log(this.user.Name);
+      
   }
+
+
 }
