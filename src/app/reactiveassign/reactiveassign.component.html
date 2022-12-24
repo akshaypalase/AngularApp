@@ -1,4 +1,4 @@
-<div class="container">
+<div  id="bg" class="container">
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-10 col-md-8 rounded shadow py-5">
         <h4 class="text-center">Reactive Form</h4>
@@ -8,21 +8,21 @@
                <label for="First Name">First Name</label>
                <input type="text" class="form-control"
                 id="username" formControlName = "username">
-                <small>Enter valid name minmum 5 character</small>
+                <small  *ngIf="!datta.get('username').valid && datta.get('username').touched " >Enter valid name minmum 5 character</small>
                </div>
               
             <div class="form-group">
                 <label for="Last Name">Last Name</label>
                 <input type="text" class="form-control"
                  id="lastName" formControlName = "lastName">
-                 <small>Enter valid lastname </small>
+                 <small *ngIf="!datta.get('lastName').valid && datta.get('lastName').touched ">Enter valid lastname </small>
             </div>
 
              <div class="form-group">
                 <label for="Age">Age</label>
                 <input type="text" class="form-control"
                  id="Age" formControlName = "Age">
-                <small>Enter valid Age</small>
+                <small *ngIf="!datta.get(Age).valid && datta.get(Age).touched">Enter valid Age</small>
             </div>
 
 
@@ -30,22 +30,23 @@
                <label for="email">Email</label>
                <input type="email" class="form-control" 
                id="email" formControlName = "email">
-               <small>Enter valid email</small>
+               <small *ngIf="!datta.get('email').valid && datta.get('email').touched ">Enter valid email</small>
             </div>
 
             <div class="form-group">
                 <label for="Phone">Phone</label>
                 <input type="text" class="form-control"
                  id="phone" formControlName = "phone">
-                 <small>please enter only 10 number</small>
+                 <small >please enter only 10 number</small>
             </div>
 
-           <div class="radio" *ngFor="let gender of genders">
-            <label>
-              <input type="radio" [value]="gender"
-              formControlName = "gender">{{gender}}
-            </label>
-           </div>
+            <div class="form-group">
+              <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                 
+                      <input type="radio" id="{{gender.id}}" value="{{gender.value}}" class="custom-control-input" formControlName="gender">
+                 <label for="{{gender.id}}">{{gender.value}}</label>
+                  </div>
+                </div>
 
           <div class="form-group">
             

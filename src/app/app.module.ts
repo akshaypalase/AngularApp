@@ -10,7 +10,6 @@ import { DatabindingAssignmentComponent } from './databinding-assignment/databin
 import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
-import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
 import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdiDirective } from './custdi.directive';
@@ -27,6 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { TempassignComponent } from './tempassign/tempassign.component';
 import { ReactiveassignComponent } from './reactiveassign/reactiveassign.component';
+import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
+
 
 @NgModule({
   declarations: [
@@ -37,8 +38,7 @@ import { ReactiveassignComponent } from './reactiveassign/reactiveassign.compone
     DatabindingAssignmentComponent,
     DemodirectivesComponent,
     NgswitchComponent,
-    AngularpraticeComponent,
-    StructuraldirectiveComponent,
+   StructuraldirectiveComponent,
     AttriComponent,
     CustdiDirective,
     HooksComponent,
@@ -52,14 +52,16 @@ import { ReactiveassignComponent } from './reactiveassign/reactiveassign.compone
     LoginformComponent,
     CheckoutComponent,
     TempassignComponent,
-    ReactiveassignComponent
+    ReactiveassignComponent,
+    AngularpraticeComponent
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

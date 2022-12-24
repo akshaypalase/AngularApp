@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-// import { Employee, TempEmp } from '../modelss/employee';
+import { FormControl, FormGroup, PatternValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-angularpratice',
@@ -9,21 +8,40 @@ import { NgForm } from '@angular/forms';
 })
 export class AngularpraticeComponent implements OnInit {
 
-  // empobj=new TempEmp();
+  myReactiveForm:FormGroup;
 
+  genders=[
+    {id:'1' , value:'Male'},
+    {id:'2' , value:'Female'}
+  ];
 
-  constructor() { }
-
- 
-
+  constructor() { 
+    this.createForm();
+  }
 
   ngOnInit() {
   }
-  OnSubmit(form:NgForm){
-    // this.empobj.username=form.value.username;
-    // this.empobj.email=form.value.email;
-    // this.empobj.subscription=form.value.subscription;
-    // this.empobj.password=form.value.password
-    console.log(form);
+  createForm(){
+    this.myReactiveForm=new FormGroup({
+      'userDetails':new FormGroup({
+      'firstname':new FormControl('',[Validators.required]),
+      'lastname':new FormControl('',[Validators.required]),
+        }),
+        'ege':new FormControl('',[Validators.required,Validators.min(17),Validators.max(20),Validators.pattern('[0-9]+$')]),
+        'email':new FormControl('',[Validators.required,Validators.email]),
+        'Phone':new FormControl('',[Validators.required,Validators.pattern('[0-9]+$')]),
+        'city':new FormControl('Mumbai',[Validators.required]),
+        'gender':new FormControl('',[Validators.required]),
+        'password':new FormControl('',[Validators.required]),
+        'cpassword':new FormControl('',[Validators.required])
+
+         
+      })
   }
+  OnSubmit(){
+    console.log(this.myReactiveForm);
+    console.log(this.myReactiveForm.value);
+    
+
+}
 }

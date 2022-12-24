@@ -1,65 +1,122 @@
-<div class="bg">
-    <div class="container-fluid ">
-        <div class="row justify-content-center ">
-            <div class="col-sm-6">
-                <div class="container">
-                <form (ngSubmit)="OnSubmit(myform)" #myform="ngForm"  >
+<div class="container border mainbg" >
+    <div class=" row justify-content-center border">
+        <div class="col-md-6 text-left rounded py-2 ">
+            <div class="h4 text-center text-dark">Reactive Form Learning</div>
+            <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()" class="bg-dark p-2 text-white shadow-lg">
+                <div formGroupName="userDetails">
+                    <div class="form-group row mb-3">
 
-                    <div class="form-group">
-                        <label for="username">Username::</label>
-                        <input type="text" ngModel placeholder="Enter username"  required name="username"
-                            class="form-control" #username="ngModel">
-                        <small ngIf="username.invalid&&username.touched" style="color: red;"> Enter valid username</small>
+                        <label class="col-sm-3 pt-1" for="">first Name</label>
+                        <div class="col-sm-8 "> <input type="text" class=" form-control text-uppercase" formControlName="firstname"
+                                placeholder="Enter first Name" >
+                            <small class="text-danger"
+                                *ngIf="myReactiveForm.get('userDetails.firstname').invalid && myReactiveForm.get('userDetails.firstname').touched">
+                                Enter valid name
+                            </small>
+                        </div>
                     </div>
-                    
-
-                    <div class="form-group">
-                        <label for="email">Email ID:</label>
-                        <input type="email" ngModel placeholder="Enter Email" email required  name="email"
-                            class="form-control" #email="ngModel">
-                        <small ngIf="email.invalid&&email.touched" style="color: red;"> Enter valid Email</small>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-3 pt-1">last Name</label>
+                        <div class="col-sm-8 ">
+                            <input type="text" class=" form-control text-uppercase" formControlName="lastname"
+                                placeholder="Enter last Name">
+                                <small class="text-danger"
+                                *ngIf="myReactiveForm.get('userDetails.lastname').invalid && myReactiveForm.get('userDetails.lastname').touched">
+                                Enter valid lastname
+                            </small>
+                        </div>
                     </div>
-                    <br>
 
-                    <div class="form-group">
-                        <label for="Select Subscription">Subscription: </label>
-                        <select  class="form-control" ngModel name="subscription" id="subscription">
-                            <option value="Basic">Basic</option>
-                            <option value="Advance">Advance</option>
-                            <option value="pro">pro</option>
-                        </select>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">Age </label>
+                    <div class="col-sm-8 ">
+                        <input type="number" class=" form-control" formControlName="ege" placeholder="Enter Ege(17-20)">
+                        <small class="text-danger" *ngIf="myReactiveForm.get('ege').invalid &&myReactiveForm.get('ege').touched">Enter valid Age</small>
                     </div>
-                    
-
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="text" ngModel placeholder="Enter password" required name="password"
-                            class="form-control" #password="ngModel">
-                        <small ngIf="password.invalid&& password.touched" style="color: red;"> password field should not be empty</small>
-                    </div><br>
-                    
-
-                    <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <br>
-                        <h3 *ngIf="myform.touched && myform.invalid" style="    color: rgb(100, 2, 63);">Please fill all
-                            fields carefully</h3>
-                    </div>
-                  
-
-                </form>
-                <div class=" row jestify-content-center mt-2">
-                    <div class="container col-md-6 rounded shadow py-3  bg-dark text-white">
-                        <h3>User data</h3>
-                        <p>User name:{{empobj.username}}</p>
-                        <p>email :{{empobj.email}}</p>
-                        <p>subscription:{{empobj.subscription}}</p>
-                        <p>password:{{empobj.password}}</p>
-                    </div>
-                   </div>
                 </div>
 
-            </div>
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Email </label>
+                    <div class="col-sm-8 ">
+                        <input type="email" name="" id="" class=" form-control" formControlName="email"
+                            placeholder="Enter Email Address">
+                            <small class="text-danger"
+                                *ngIf="myReactiveForm.get('email').invalid&&myReactiveForm.get('email').touched">
+                                Enter valid email
+                            </small>
+                    </div>
+                </div> &nbsp;
+
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Phone </label>
+                    <div class="col-sm-8 ">
+                        <input type="text" class=" form-control" formControlName="Phone"
+                            placeholder="Enter Phone number" maxlength="10" pattern="[0-9]+$">
+                            <small class="text-danger"
+                            *ngIf="myReactiveForm.get('Phone').invalid&&myReactiveForm.get('Phone').touched">
+                            Enter valid Phone number
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group  row mb-3 h6">
+                    <label class="col-sm-3 pt-1">Select city</label>
+                    <div class="col-sm-8 ">
+                        <select class="form-control" formControlName="city">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkatta">Kolkatta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group  row mb-3">
+                    <label class="col-sm-3 pt-1">Gender </label>
+                    <div class="col-sm-8">
+                    <div class="custome-control custom-radio " *ngFor="let genderss of genders">
+                       
+                            <input type="radio" id="{{genderss.id}}" formControlName="gender" value="{{genderss.value}}"
+                                class="custome-control-input">
+                            <label for="{{genderss.id}}" class="custome-control-lable">{{genderss.value}}</label>
+                        
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">password </label>
+                    <div class="col-sm-8 ">
+                        <input type="password" class=" form-control" formControlName="password"
+                            placeholder="Enter password">
+                            <small class="text-danger"
+                            *ngIf="myReactiveForm.get('password').invalid && myReactiveForm.get('password').touched">
+                            Enter valid password
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group row mb-3">
+                    <label class="col-sm-3 pt-1">Conform password </label>
+                    <div class="col-sm-9 ">
+                        <input type="password" class=" form-control" formControlName="cpassword"
+                            placeholder="Conform password">
+
+                            <small class="text-danger" *ngIf="myReactiveForm.get('password').value!=myReactiveForm.get('cpassword').value && myReactiveForm.get('cpassword').touched">
+                             Password Missssmatch!!!
+                    </small>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div >
+                        <button class="btn btn-success form-control" [disabled]="btndisable">Register</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
