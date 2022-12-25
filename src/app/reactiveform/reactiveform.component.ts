@@ -29,16 +29,30 @@ myReactiveForm : FormGroup;
 
   
   ngOnInit() {
-  //   
+  //   setTimeout(()=>{
+  //  this.myReactiveForm.setValue({
+  //   'userDetails' : {
+  //     'username' : "akshay",
+  //     'Email'    :  "akshaypalase6@gmail.com"
+  //   },
+    
+  //     'course'   : 'Angular',
+  //     'gender'   :   'male'
+    
+  //  })
+   
+  // }, 3500);
+  // }
+
   setTimeout(()=>{
-    this.myReactiveForm.patchValue({
-     'userDetails' : {
-       'username' : "akshay",
-       'Email'    :  "akshaypalase6@gmail.com"
-     },
-     })
-    }, 3500);
-   }
+     this.myReactiveForm.patchValue({
+      'userDetails' : {
+        'username' : "akshay",
+        'Email'    :  "akshaypalase6@gmail.com"
+      },
+      })
+     }, 3500);
+    }
 
  createForm (){
   this.myReactiveForm= new FormGroup({

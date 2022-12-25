@@ -27,6 +27,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { TempassignComponent } from './tempassign/tempassign.component';
 import { ReactiveassignComponent } from './reactiveassign/reactiveassign.component';
 import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -53,7 +58,12 @@ import { AngularpraticeComponent } from './angularpratice/angularpratice.compone
     CheckoutComponent,
     TempassignComponent,
     ReactiveassignComponent,
-    AngularpraticeComponent
+    AngularpraticeComponent,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginComponent
  
   ],
   imports: [
