@@ -32,6 +32,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 
 
 @NgModule({
@@ -63,7 +65,9 @@ import { LoginComponent } from './login/login.component';
     ContactusComponent,
     ProductComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    Servicecomp1Component,
+    Servicecomp2Component
  
   ],
   imports: [
