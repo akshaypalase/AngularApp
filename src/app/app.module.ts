@@ -34,6 +34,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
+import { PagenotfoundComponent } from './services/pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 
 
 @NgModule({
@@ -67,7 +72,12 @@ import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
     HomeComponent,
     LoginComponent,
     Servicecomp1Component,
-    Servicecomp2Component
+    Servicecomp2Component,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TvComponent,
+    TabletComponent,
+    WashingmachineComponent
  
   ],
   imports: [
