@@ -1,0 +1,37 @@
+<div>
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            userId
+                        </th>
+                        
+                        <th>
+                            Id
+                        </th>
+
+                        <th>
+                            title
+                        </th>
+
+                        <th>
+                            body
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of arrPosts">
+                        <td>{{post.userId}}</td>
+                        <td>{{post.Id}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.body}}</td>
+                         
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>

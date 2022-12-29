@@ -10,9 +10,12 @@ export class Servicecomp1Component implements OnInit {
 
   constructor(private _demoService:DemoService) { }
 
+  products={};
+
   ngOnInit() {
+    this.products=this._demoService.products;
   }
-  onSubscribe(){
-    this._demoService.display()
-  }
+  // onSubscribe(){
+  //   this._demoService.display()
+  // }
 }

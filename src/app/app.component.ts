@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DemoService } from './services/demo.service';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +7,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  Getdata : any; 
 
-  constructor(){
+  constructor(private _demoservice : DemoService){
      console.log("parent constructor is called");
     
-
+    
   }
   ngOnInit() {
+    this._demoservice.getuserdata().subscribe(data => {
+ 
+      console.log('getting data from user',data);
 
-   console.log("parent ngOnInit is called");
+     this.Getdata = data;
+      
+})
+this._demoservice.getPosts().subscribe(result=>{
+  console.log('posts',result);
+  
+})
+
+   
   }
+
+  
+    
   // updatedata(){
   //   this.data="hi";
   // }

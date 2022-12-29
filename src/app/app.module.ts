@@ -39,6 +39,13 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { TvComponent } from './product/tv/tv.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { DemopostComponent } from './product/demopost/demopost.component';
+import {  HttpClientModule } from '@angular/common/http';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
 
 
 @NgModule({
@@ -77,14 +84,21 @@ import { WashingmachineComponent } from './product/washingmachine/washingmachine
     LaptopComponent,
     TvComponent,
     TabletComponent,
-    WashingmachineComponent
- 
+    WashingmachineComponent,
+    DemopostComponent,
+    PostdetailsComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
+   
  
   ],
   providers: [],

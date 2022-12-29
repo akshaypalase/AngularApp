@@ -1,4 +1,9 @@
-<p>servicecomp1 works!</p>
+<!-- <p>servicecomp1 works!</p>
 
 
-<button (click)="onSubscribe()">Subscribe</button>
+<button (click)="onSubscribe()">Subscribe</button> -->
+<ng-container *ngFor="let product of products">
+    product Name : <strong class="text-success">{{product.name}}</strong>
+    product Id   : <strong class="text-success">{{product.id}}</strong>
+    <br>
+</ng-container>
