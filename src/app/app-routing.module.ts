@@ -5,6 +5,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { DemopostComponent } from './product/demopost/demopost.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
     {path:'washingmachine',component:WashingmachineComponent},
   
   ]},
-  {path:'postdetails/:id',component:PostdetailsComponent},
+  // {path:'postdetails/:id',component:PostdetailsComponent},
+{path:'post',component:DemopostComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 

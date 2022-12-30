@@ -16,17 +16,17 @@ export class AppComponent {
     
   }
   ngOnInit() {
-    this._demoservice.getuserdata().subscribe(data => {
+    // this._demoservice.getuserdata().subscribe(data => {
  
-      console.log('getting data from user',data);
+    //   console.log('getting data from user',data);
 
-     this.Getdata = data;
+    //  this.Getdata = data;
       
-})
-this._demoservice.getPosts().subscribe(result=>{
-  console.log('posts',result);
+// })
+// this._demoservice.getPosts().subscribe(result=>{
+//   console.log('posts',result);
   
-})
+// })
 
    
   }

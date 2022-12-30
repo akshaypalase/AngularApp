@@ -5,8 +5,11 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class UtilityService {
+  //In Subject we can't initialize value
 //  userName = new Subject<any>();
- userName=new BehaviorSubject('akshay');
+
+//In BehaviorSubject we can initialize value
+ userName=new BehaviorSubject('javascript');
  
   constructor() { }
 }

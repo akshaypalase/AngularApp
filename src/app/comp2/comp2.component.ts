@@ -19,9 +19,15 @@ export class Comp2Component implements OnInit {
   }
 
   updateUserName(uname){
-    console.log(uname.value);
     
-    this._utilityService.userName.next(uname.value);
+    let emp={
+      name : 'akshay',
+      id  :  '101'
+    }
+
+    // console.log(uname.value);
+    
+    this._utilityService.userName.next(JSON.stringify(emp));
 
 
   }
