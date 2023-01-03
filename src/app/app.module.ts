@@ -29,16 +29,11 @@ import { ReactiveassignComponent } from './reactiveassign/reactiveassign.compone
 import { AngularpraticeComponent } from './angularpratice/angularpratice.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 import { PagenotfoundComponent } from './services/pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 import { DemopostComponent } from './product/demopost/demopost.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
@@ -52,6 +47,7 @@ import { PipepracticeComponent } from './pipepractice/pipepractice.component';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CountPipe } from './count.pipe';
+
 
 
 
@@ -82,16 +78,11 @@ import { CountPipe } from './count.pipe';
     AngularpraticeComponent,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
     HomeComponent,
     LoginComponent,
     Servicecomp1Component,
     Servicecomp2Component,
     PagenotfoundComponent,
-    LaptopComponent,
-    TvComponent,
-    TabletComponent,
-    WashingmachineComponent,
     DemopostComponent,
     PostdetailsComponent,
     Comp1Component,
@@ -109,11 +100,17 @@ import { CountPipe } from './count.pipe';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-   
+    HttpClientModule,
+    
+    
  
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('app module called');
+    
+  }
+ }
