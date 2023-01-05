@@ -1,15 +1,15 @@
 <form>
     <div class="form-group">
       <label for="emailHelp">Email address</label>
-      <input type="email" #uname class="form-control" id="emailHelp" placeholder="Enter email">
+      <input type="email" #uname class="form-control" id="emailHelp" placeholder="Enter email" autocomplete="on">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" #pass class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="on">
+      <label for="exampleInputPassword">Password</label>
+      <input type="password" #pass class="form-control" id="exampleInputPassword" placeholder="Password" autocomplete="on">
     </div>
     <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" autocomplete="on">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <button type="submit" class="btn btn-primary" (click)="checkuser(uname.value,pass.value)">Submit</button>

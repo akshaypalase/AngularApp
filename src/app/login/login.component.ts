@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 // import { DemoService } from '../services/demo.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _route :Router) { }
+  constructor(private _route :Router,private _authService:AuthService) { }
 
   ngOnInit() {
   }
@@ -18,9 +19,19 @@ export class LoginComponent implements OnInit {
 //   demoservice.display();
 // }
 checkuser(uname,pass){
-  if(uname=='admin' && pass=='admin' ){
-     this._route.navigate(['product/tv']);
+  
+  var output=this._authService.checkUserNameandPassword(uname,pass)
+  if(output == true){
+    window.alert('login successfully')
+    this._route.navigate(['product'])
+  }else{
+    window.alert('Invalid username and password')
+    
   }
+  
+  // if(uname=='admin' && pass=='admin' ){
+  //    this._route.navigate(['product/tv']);
+  // }
 }
 
 }

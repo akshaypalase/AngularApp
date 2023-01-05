@@ -47,6 +47,7 @@ import { PipepracticeComponent } from './pipepractice/pipepractice.component';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { CountPipe } from './count.pipe';
+import { AdduserComponent } from './adduser/adduser.component';
 
 
 
@@ -93,7 +94,8 @@ import { CountPipe } from './count.pipe';
     CountPipe,
     PipepracticeComponent,
     FilterpipeComponent,
-    FilterPipe
+    FilterPipe,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,

@@ -12,4 +12,8 @@ export class PostService {
 getPosts(): Observable<any>{
   return this.htttpclient.get(`${devAPIUrl}posts`)
 }
+deletePostById(id){
+  return this.htttpclient.delete(`${devAPIUrl}posts/`+id);
 }
+}
+

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Post } from './models/post';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,7 @@ export class AppComponent {
   
   Getdata : any; 
 
-  constructor(private _demoservice : DemoService){
+  constructor(private _demoservice : DemoService,private _postService:PostService){
      console.log("parent constructor is called");
     
     
@@ -70,6 +72,12 @@ export class AppComponent {
 
   destroy(){
     this.childexist=false;
+  }
+  DeletePost(){
+    this._postService.deletePostById(1).subscribe(res => {
+      console.log(res);
+      
+    })
   }
 }
 
